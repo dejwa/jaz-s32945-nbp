@@ -28,7 +28,7 @@ public class CurrencyService {
     }
 
     public Double getAvgCurrency(String currency, LocalDate startDate, LocalDate endDate) {
-        String url = "https://api.nbp.pl/api/exchangerates/rates/a/"+currency+"/"+startDate+"/"+endDate+"/?format=json";
+        String url = "http://api.nbp.pl/api/exchangerates/rates/a/"+currency+"/"+startDate+"/"+endDate+"/?format=json";
 
         try {
             HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
